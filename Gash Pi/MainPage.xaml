@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Gash_Pi.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gash_Pi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="txtShowStatus" TextAlignment="Center" Text="Waiting For Scan" Margin="10" FontSize="25"/>
+            <TextBox x:Name="txtinput"  Text="Charge Money" FontSize="24" TextAlignment="Center"  Margin="10" TextChanged="txtinput_TextChanged"/>
+            <Button x:Name="btninput" Content="投100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btninput_Click"/>
+            <TextBox x:Name="insertMoney"  Text=""/>
+        </StackPanel>
+    </Grid>
+</Page>
