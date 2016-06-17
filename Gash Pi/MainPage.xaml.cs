@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using System.Diagnostics;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Gash_Pi
@@ -27,24 +27,17 @@ namespace Gash_Pi
         public MainPage()
         {
             this.InitializeComponent();
-            txtinput.Text = "200";
+            //txtinput.Text = "200";
         }
 
         private void txtinput_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //txtShowStatus.Visibility = Visibility.Collapsed;
+          
+            barcode.decode(txtinput.Text);
 
-            try
-            {
-                //int value = Int32.Parse(txtinput.Text);
-                //barcode.decode(value);  
-                txtShowStatus.Text = "請投入" + barcode.decode(Int32.Parse(txtinput.Text)) + "元";
+            txtShowStatus.Text = "請投入" + charge.ChargeAmount.ToString() + "元";
 
-            }
-            catch (FormatException except)
-            {
-                txtinput.Text = except.Message;
-            }
+            txtinput.Visibility = Visibility.Collapsed;
         }
 
         private void btninput_Click(object sender, RoutedEventArgs e)

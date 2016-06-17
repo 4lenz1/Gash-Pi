@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Gash_Pi
 {
-    class ChargeProcess
+    class ChargeProcess : VerifyProcess
     {
         private int chargeAmount = 0;
         private int currentChargeAmount = 0 ;
-        private int refundMoney = 0;
 
         public int ChargeAmount
         {
@@ -35,19 +34,6 @@ namespace Gash_Pi
             set
             {
                 currentChargeAmount = value;
-            }
-        }
-
-        public int RefundMoney
-        {
-            get
-            {
-                return refundMoney;
-            }
-
-            set
-            {
-                refundMoney = value;
             }
         }
     }

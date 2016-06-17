@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gash_Pi
 {
-    class Callback
+    class VerifyProcess
     {
     }
 }

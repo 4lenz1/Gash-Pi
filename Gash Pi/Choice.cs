@@ -8,5 +8,13 @@ namespace Gash_Pi
 {
     class Choice
     {
+        public void reset()
+        {
+
+        }
+        public void cancel()
+        {
+
+        }
     }
 }
